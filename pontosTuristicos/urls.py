@@ -17,10 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+
+from avaliacao.api.viewsets import AvaliacaoViewSet
+from comentario.api.viewsets import ComentarioViewSet
 from core.api.viewsets import PontoTuristicoViewSet
+from atracao.api.viewsets import AtracaoViewSet
+from endereco.api.viewsets import EnderecoViewSet
 
 router = routers.DefaultRouter()
-router.register(r'ponto_turistico', PontoTuristicoViewSet)
+router.register(r'pontos_turisticos', PontoTuristicoViewSet)
+router.register(r'atracoes', AtracaoViewSet)
+router.register(r'enderecos', EnderecoViewSet)
+router.register(r'comentarios', ComentarioViewSet)
+router.register(r'avaliacoes', AvaliacaoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
