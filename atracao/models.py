@@ -7,6 +7,7 @@ class Atracao(models.Model):
     descricao = models.TextField(verbose_name=_('Descrição'))
     horario_funcionamento = models.TextField(verbose_name=_('Horário de funcionamento'))
     idade_minima = models.IntegerField(_('Idade mínima'))
+    foto = models.ImageField(upload_to='atracoes', null=True, blank=True)
 
     def __str__(self):
         return self.nome
