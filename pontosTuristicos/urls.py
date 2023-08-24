@@ -31,7 +31,7 @@ from rest_framework.authtoken import views
 
 
 router = routers.DefaultRouter()
-router.register(r'pontos_turisticos', PontoTuristicoViewSet, base_name='PontoTuristico')
+router.register(r'pontos_turisticos', PontoTuristicoViewSet, basename='PontoTuristico')
 router.register(r'atracoes', AtracaoViewSet)
 router.register(r'enderecos', EnderecoViewSet)
 router.register(r'comentarios', ComentarioViewSet)
